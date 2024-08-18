@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
+    
+    <!-- Configuración de sesión -->
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+    <!-- Definición del servlet GestionEmplearServlet -->
+    <servlet>
+        <servlet-name>GestionEmplearServlet</servlet-name>
+        <servlet-class>com.mycompany.desafio1dwf1.servlet.GestionEmplearServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GestionEmplearServlet</servlet-name>
+        <url-pattern>/gestionEmpleados</url-pattern>
+    </servlet-mapping>
+
+    <!-- Definición del servlet EmpleadoServlet -->
+    <servlet>
+        <servlet-name>EmpleadoServlet</servlet-name>
+        <servlet-class>com.mycompany.desafio1dwf1.servlet.EmpleadoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EmpleadoServlet</servlet-name>
+        <url-pattern>/empleados</url-pattern>
+    </servlet-mapping>
+
+    <!-- Archivo de bienvenida -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
